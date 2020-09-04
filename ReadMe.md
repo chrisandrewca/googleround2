@@ -1,6 +1,6 @@
 # Google Round 2
 
-#### How to run
+### How to run
 1. git clone https://github.com/chrisandrewca/googleround2.git
 2. cd googleround2
 3. npm install
@@ -8,3 +8,4 @@
 
 ### Requirements
 node v14.9.0
+chrome 84
