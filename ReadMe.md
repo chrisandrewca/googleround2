@@ -5,3 +5,6 @@
 2. cd googleround2
 3. npm install
 4. npm run start
+
+### Requirements
+node v14.9.0
