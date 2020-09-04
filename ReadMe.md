@@ -7,5 +7,5 @@
 4. npm run start
 
 ### Requirements
-node v14.9.0
+node v14.9.0  
 chrome 84
