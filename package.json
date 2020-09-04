@@ -1,0 +1,12 @@
+{
+  "author": "Chris Campbell",
+  "name": "googleround2",
+  "license": "GPLv2",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "version": "1.0.0",
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}

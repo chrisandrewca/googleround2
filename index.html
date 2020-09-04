@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Google Round 2</title>
+</head>
+
+<body>
+  <script type="module">
+
+    const loadProgram = (program) => {
+
+      const programs = {
+        Coin2: async () => await import('./programs/coin')
+      };
+
+      programs[program]();
+    };
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+      document
+        .querySelector('select')
+        .addEventListener('change', ({
+          target: {
+            value: program
+          }
+        }) => loadProgram(program));
+    });
+  </script>
+
+  <select>
+    <option>Coin</option>
+    <option>Coin2</option>
+  </select>
+
+  <main></main>
+</body>
+
+</html>
