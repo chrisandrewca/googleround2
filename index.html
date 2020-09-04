@@ -9,13 +9,17 @@
 <body>
   <script type="module">
 
-    const loadProgram = (program) => {
+    const loadProgram = async (program) => {
+
+      document.querySelector('main').innerHTML = '';
 
       const programs = {
-        Coin2: async () => await import('./programs/coin')
+        Coin: async () => await import('./programs/coin'),
+        BinarySearch: async () => await import('./programs/binary-search'),
+        EggQuad: async () => await import('./programs/egg-quad')
       };
 
-      programs[program]();
+      (await programs[program]()).default();
     };
 
     document.addEventListener('DOMContentLoaded', () => {
@@ -27,12 +31,15 @@
             value: program
           }
         }) => loadProgram(program));
+
+      loadProgram('EggQuad');
     });
   </script>
 
   <select>
+    <option>EggQuad</option>
     <option>Coin</option>
-    <option>Coin2</option>
+    <option>BinarySearch</option>
   </select>
 
   <main></main>
